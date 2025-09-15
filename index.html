@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruth Kitty Kemuma | Data Analytics Engineer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+        header {
+            background: #2d3748;
+            color: #fff;
+            padding: 2rem 1rem 1.5rem 1rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 0.7rem 0 0 0;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #a0aec0;
+        }
+        section {
+            max-width: 700px;
+            margin: 2rem auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 9px;
+            box-shadow: 0 4px 20px rgba(44,62,80,0.07);
+        }
+        h2 {
+            margin-top: 0;
+            color: #2d3748;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 1rem;
+            margin-bottom: 0.3rem;
+            font-weight: bold;
+        }
+        input, textarea, button {
+            padding: 0.7rem;
+            font-size: 1rem;
+            border: 1px solid #cbd5e0;
+            border-radius: 5px;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #4299e1;
+        }
+        button {
+            margin-top: 1.5rem;
+            background: #2b6cb0;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #2c5282;
+        }
+        .success-message {
+            color: green;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            section {
+                padding: 1rem;
+                margin: 1rem;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ruth Kitty Kemuma</h1>
+        <p>Data Analytics Engineer | Turning Data into Decisions</p>
+    </header>
+
+    <section>
+        <h2>About Me</h2>
+        <p>
+            Passionate about transforming raw data into actionable insights, I specialize in helping organizations make informed decisions through advanced analytics and data-driven strategies.
+        </p>
+    </section>
+
+    <section>
+        <h2>Contact Me</h2>
+        <form id="contactForm" autocomplete="off">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+            <div id="formMessage" class="success-message" style="display: none;">
+                Thank you! Your message has been sent.
+            </div>
+        </form>
+    </section>
+    <script>
+        // Simple frontend-only contact form handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would typically send the data to a server or email API
+            document.getElementById('formMessage').style.display = 'block';
+            // Optionally, clear the form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
